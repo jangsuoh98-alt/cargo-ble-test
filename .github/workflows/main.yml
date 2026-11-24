@@ -1,4 +1,4 @@
-name: Build CARGO APK V3
+name: Build CARGO APK V4
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
           gradle-version: '8.9'
 
       - name: Extract project
-        run: unzip -o Cargo_BLE_Test_V3.zip -d cargo
+        run: unzip -o Cargo_BLE_Test_V4.zip -d cargo
 
       - name: Build APK
         working-directory: cargo
