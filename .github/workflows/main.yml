@@ -1,4 +1,4 @@
-name: Build CARGO APK V71
+name: Build CARGO APK V72
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
           gradle-version: '8.9'
 
       - name: Extract project
-        run: unzip -o Cargo_BLE_Test_V71.zip -d cargo
+        run: unzip -o Cargo_BLE_Test_V72.zip -d cargo
 
       - name: Build APK
         working-directory: cargo
@@ -39,6 +39,6 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: CARGO-BLE-TEST-V71
+          name: CARGO-BLE-TEST-V72
           path: cargo/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
